@@ -17,6 +17,7 @@
       font-family: 'Noto Nastaliq Urdu', serif;
       direction: rtl;
     }
+    
   </style>
 </head>
 
@@ -64,7 +65,8 @@
           div.innerHTML = `
             <div class="flex justify-between items-start gap-4" id="ayah-${i}">
               <div class="text-right w-full">
-                <div class="font-arabic text-2xl text-gray-900 mb-2">
+                <div class="font-arabic text-2xl text-gray-900 mb-2 tracking-wide leading-[2.5]">
+
                   ${arabic.text} <span class="text-xl text-gray-500">۝</span>
                 </div>
                 <div class="font-urdu text-xl text-emerald-700 leading-loose">${urdu.text}</div>
