@@ -62,21 +62,21 @@
           div.className = "bg-white/80 p-5 rounded-xl border border-gray-200 shadow transition-all";
 
           div.innerHTML = `
-  <div class="flex justify-between items-start gap-4" id="ayah-${i}">
-    <div class="text-right w-full">
-      <div class="font-arabic text-2xl text-gray-900 mb-2">
-        ${arabic.text} <span class="text-xl text-gray-500">۝</span>
-      </div>
-      <div class="font-urdu text-xl text-emerald-700 leading-loose">${urdu.text}</div>
-      <div class="text-sm text-gray-400 mt-2">(${arabic.numberInSurah})</div>
-    </div>
-    <button onclick="playFromIndex(${i})" class="p-2 text-emerald-600 hover:text-emerald-800" title="Play Audio">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
-        <path d="M3 22v-20l18 10-18 10z" />
-      </svg>
-    </button>
-  </div>
-`;
+            <div class="flex justify-between items-start gap-4" id="ayah-${i}">
+              <div class="text-right w-full">
+                <div class="font-arabic text-2xl text-gray-900 mb-2">
+                  ${arabic.text} <span class="text-xl text-gray-500">۝</span>
+                </div>
+                <div class="font-urdu text-xl text-emerald-700 leading-loose">${urdu.text}</div>
+                <div class="text-sm text-gray-400 mt-2">(${arabic.numberInSurah})</div>
+              </div>
+              <button id="btn-${i}" onclick="toggleAudio(${i})" class="p-2 text-emerald-600 hover:text-emerald-800" title="Play Audio">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path d="M3 22v-20l18 10-18 10z" />
+                </svg>
+              </button>
+            </div>
+          `;
           container.appendChild(div);
         }
 
